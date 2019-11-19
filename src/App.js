@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import './cards/cards.css';
+import Card from './Components/Card/Card';
+import Deck5 from "./CardDeck";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+    state = {
+        deck: Deck5,
+    };
+
+    render(){
+
+        // const newCards = this.state.deck.map(card => (< Card suit={card.suit} rank={card.rank}/>));
+
+        return (
+            <div className="App">
+                <div className="playingCards faceImages">
+
+                </div>
+            </div>
+        );
+    }
 }
 
 export default App;
